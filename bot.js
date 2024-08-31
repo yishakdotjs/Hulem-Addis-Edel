@@ -4,7 +4,7 @@ const User = require("./models/users");
 const dotenv = require("dotenv");
 
 // Config
-mongoose.connect('mongodb://127.0.0.1:27017/hulem_addis');
+mongoose.connect(process.env.DB_CONNECTION_URL);
 dotenv.config();
 const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 

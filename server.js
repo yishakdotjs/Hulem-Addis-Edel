@@ -11,7 +11,7 @@ dotEnv.config();
 const port = process.env.PORT;
 
 // DB Config
-mongoose.connect('mongodb://127.0.0.1:27017/hulem_addis');
+mongoose.connect(process.env.DB_CONNECTION_URL);
 
 // View Engine Setup
 app.set("views", "views");
