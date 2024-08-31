@@ -4,8 +4,8 @@ const User = require("./models/users");
 const dotenv = require("dotenv");
 
 // Config
-mongoose.connect(process.env.DB_CONNECTION_URL);
 dotenv.config();
+mongoose.connect(process.env.DB_CONNECTION_URL);
 const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 
 // Start Command Handler
